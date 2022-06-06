@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100vh;
+            width: 100vw;
+            border: 2px solid red;
+        }
+        div>iframe{
+            height: 100vh;
+            width: 100vw;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    
+</body>
+</html>
+<script>
+    var cont =document.querySelector("div")
+    var id = JSON.parse(localStorage.getItem("id"))
+    console.log(id)
+    dispaly()
+    function dispaly(){
+        var iframe=document.createElement("iframe")
+        iframe.src=`https://www.youtube.com/embed/${id}`;
+        cont.append(iframe)
+    }
+</script>

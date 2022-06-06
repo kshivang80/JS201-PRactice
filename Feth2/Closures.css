@@ -1,0 +1,10 @@
+input{
+    width:200px
+}
+#movies{
+    height:200px;
+    width:206px;
+    border:1px solid black;
+    border-top: none;
+    overflow: scroll;
+}

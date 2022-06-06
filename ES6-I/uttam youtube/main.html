@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #videos{
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+         gap: 20px;
+     }
+     #videos>div>p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bolder;
+        margin-top: -7px;
+     }
+     #videos>div{
+       cursor: pointer;
+     }
+     #videos>div>img{
+       width: 100%;
+     }
+     .logo{
+       height: 50%;
+       width: 10%;
+     }
+
+     .navebar{
+       display: flex;
+       height: 60px;
+       background-color:white;
+       align-items: center;
+       padding: 0px 20px;
+       border-bottom: 1px solid black;
+     }
+     .navebar>input{
+      margin-left: 25px;
+      height: 40px;
+      width: 50%;
+      border: 1px solid grey;
+      padding-left: 20px;
+     }
+     .navebar>button{
+      margin-left: 5px;
+      height: 40px;
+      width: 10%;
+      text-transform: uppercase;
+      font-weight: 500;
+     }
+     
+
+    </style>
+    
+</head>
+<body>
+    <div class="navebar">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png">
+        <input type="search" id="search">
+        <button onclick="search()">search</button>
+    </div>
+    <div id="videos">
+
+    </div>
+    
+</body>
+</html>
+<script src="./main.js"></script>

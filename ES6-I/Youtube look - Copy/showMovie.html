@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 90vh;
+            width: 90vw;
+            border: 2px solid teal;
+        }
+        div>iframe{
+            height: 90vh;
+            width: 90vw;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Hello brother</h1> -->
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    var container =document.querySelector("div")
+    var id = JSON.parse(localStorage.getItem("id"))
+
+    console.log(id)
+    dispaly()
+    function dispaly(){
+        var iframe=document.createElement("iframe")
+        if(id.videoId===undefined){
+            iframe.src=`https://www.youtube.com/embed/${id}`;
+        }
+        else{
+            iframe.src=`https://www.youtube.com/embed/${id.videoId}`;
+        }
+         iframe.allow="fullscreen"
+        container.append(iframe)
+    }
+</script>

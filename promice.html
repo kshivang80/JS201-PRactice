@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+           height:30%;
+           width:30%;
+        }
+        image{
+           height:30%;
+           width:30%;
+        }
+    </style>
+</head>
+<body>
+    <img id="loading_img" src="https://media0.giphy.com/media/l3nWhI38IWDofyDrW/giphy.gif?cid=790b7611e9c8795c6b758fa04e48b9cda14a27d0c4aa9b55&rid=giphy.gif&ct=g">
+</body>
+</html>
+
+<script>
+
+let image=document.getElementById("loading_img")
+
+function checkContent(){
+    //checking content logic
+    return true;
+}
+
+let content_promise = new Promise(function(resolve,reject){
+    //if content is loaded, resolve
+    //if content is not loaded ,reject
+
+
+    let content=checkContent();
+
+    setTimeout(function(){
+        
+        if(content===true)
+    {
+        //promise is resolve;
+       
+        resolve("Content is loaded")
+    }
+    else
+    {
+        //promise is rejected;
+        reject("content failed to load")
+    }
+    }, 3000)
+    
+  
+});
+
+ //console.log("content_promise :",content_promise)
+
+ //is it time to grab the promise value?
+ //how - .then  and .catch
+
+ content_promise.then(function(value){
+    // console.log("value",value)
+
+    image.src="https://cdn.corporatefinanceinstitute.com/assets/product-mix3.jpeg"
+ })
+
+ content_promise.catch(function(Error){
+     //console.log("Error", Error)
+
+     image.src="https://www.freecodecamp.org/news/content/images/2021/03/ykhg3yuzq8931--1-.png"
+ })
+
+// .then = resolve value grab
+// .catch = rejected value grab
+</script>
