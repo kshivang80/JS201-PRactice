@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <style>
+      #form{
+       margin-left: 50%;
+       margin-top: 120px;
+       
+
+
+      }
+      
+      input{
+        display: block;
+        text-align: center;
+        height:30px;
+        width:30%;
+        font-size: 120%;
+        margin-top: 10px;
+      }
+      button{
+        /* text-align: center; */
+        margin-top: 10px ;
+        height:30px;
+        width:25%;
+        font-size: 120%;
+        margin-top: 10px;
+        margin-left: 20px;
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="order-form">
+      <!--Add your form html element here-->
+      <!--In form, give #name,#number and #address as HTML id's to relevant input elements -->
+      <!-- confirm button with id "confirm" -->
+      <form id="form">
+            <input type="text" id="name" placeholder="Enter Your Name">
+            <input type="number" id="number" placeholder="Enter Your Number">
+            <input type="text" id="address" placeholder="Enter Your Address">
+            <button id="confirm" onclick="myFinalCheckout(event)">Confirm</button>
+      </form>
+    </div>
+  </body>
+</html>
+<script src="./scripts/checkout.js"></script>
