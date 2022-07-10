@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  #navbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(126, 182, 163);
+    color: white;
+    padding: 0 50px 0 50px;
+  }
+
+  #navbar>a {
+    color: white;
+    text-decoration: none;
+  }
+
+  #voucher_list {
+    margin: 30px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 40px;
+  }
+
+  #voucher_list>* {
+    text-align: center;
+  }
+  #voucher_list> .voucher > button{
+    width: 60px;
+  }

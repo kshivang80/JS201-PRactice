@@ -1,0 +1,45 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+#navbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(126, 182, 163);
+    color: white;
+    padding: 0 50px 0 50px;
+  }
+
+  #navbar>a{
+    color: white;
+    text-decoration: none;
+  }
+
+  #form{
+    border: 1px solid  rgb(126, 182, 163);
+    background-color: rgb(126, 182, 163);
+    width:50%;
+    margin: auto;
+    color:white;
+    margin-top: 40px;
+    text-align: center;
+    padding-top:100px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+  }
+  #form>*{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    width:300px;
+    height:30px;
+
+  }
+  #form >:last-child{
+    width:100px;
+    cursor: pointer;
+    border: 5px;
+  }
