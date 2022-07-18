@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    border: 1px solid grey;
+    align-items: center;
+    padding: 0 20px;
+}
+#navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+#side_bar_container {
+    display: flex;
+}
